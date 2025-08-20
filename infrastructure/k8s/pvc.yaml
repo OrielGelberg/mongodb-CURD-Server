@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+   name: mongo-db-pvc
+   labels:
+    app.kubernetes.io/name: mongo
+    app.kubernetes.io/instance: mongo-db
+    app.kubernetes.io/part-of: mongo-loader-app
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
